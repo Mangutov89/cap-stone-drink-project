@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function NewDrinkForm(props){
+function CreateNewDrinkForm(props){
 
   let _name = null;
   let _ingredients = null;
   let _directions = null;
 
-  function handleNewDrinkFormSubmission(event) {
+  function handleCreateNewDrinkFormSubmission(event) {
     event.preventDefault();
-    props.onNewDrinkCreation({name: _name.value, ingredients: _ingredients.value, directions: _directions.value});
+    props.onCreateNewDrinkCreation({name: _name.value, ingredients: _ingredients.value, directions: _directions.value});
     _name.value = '';
     _ingredients.value = '';
     _directions.value = '';
@@ -17,7 +17,7 @@ function NewDrinkForm(props){
 
   return (
     <div>
-      <form onSubmit={handleNewDrinkFormSubmission}>
+      <form onSubmit={handleCreateNewDrinkFormSubmission}>
         <input
           type='text'
           id='name'
@@ -38,8 +38,8 @@ function NewDrinkForm(props){
   );
 }
 
-// NewDrinkForm.propTypes = {
-//   onNewDrinkCreation: PropTypes.func
+// CreateNewDrinkForm.propTypes = {
+//   onCreateNewDrinkCreation: PropTypes.func
 // };
 
-export default NewDrinkForm;
+export default CreateNewDrinkForm;
