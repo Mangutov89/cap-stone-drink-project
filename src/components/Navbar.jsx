@@ -31,7 +31,11 @@ function Navbar(){
         <h1>Drink App</h1>
       </div>
       <div style = { sideNav }>
-        <h1 style = { marginRight }>Add a Drink</h1>s
+        <h1 style = { marginRight }>Log In</h1>
+        <h1 style = { marginRight }>About Us</h1>
+        <h1 style = { marginRight }>Recommend a Drink</h1>
+        <h1 style = { marginRight }>Your Favorite Drinks</h1>
+        <h1 style = { marginRight }>Shop</h1>
       </div>
     </div>
   );
