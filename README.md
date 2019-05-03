@@ -6,12 +6,12 @@
 
 ## Description
 
-_A static website built in react for a website where you can see a tap list of beers that are available this month._
+_A website where you can search or either non alcoholic or alcoholic beverages. You can also log in though google and create an account where you can favorite your favorite beverages and it will store them in firebase. You can also create your own beverages that you cannot find a recipe for or if you have made your own creation._
 
 
 ## Setup/Installation Requirements
 
-* Clone or Download from Github @ https://github.com/Mangutov89/beer-list
+* Clone or Download from Github @ https://github.com/Mangutov89/cap-stone-drink-project
 * In root of directory run "$ npm install"
 * Run "$npm run start"
 * open up a window on http://localhost:8080/
