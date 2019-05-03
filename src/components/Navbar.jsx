@@ -28,10 +28,10 @@ function Navbar(){
   return (
     <div style={ flexNavbar }>
       <div style = { marginLeft }>
-        <h1>PDX Beerly Bar</h1>
+        <h1>Drink App</h1>
       </div>
       <div style = { sideNav }>
-        <h1 style = { marginRight }>RECOMMEND A BEER</h1>
+        <h1 style = { marginRight }>Add a Drink</h1>s
       </div>
     </div>
   );
