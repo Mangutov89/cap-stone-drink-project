@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-function Agequestion(props){
+function AgeQuestion(props){
   return (
     <div>
       <h1>Welcome to the Drink App</h1>
@@ -12,8 +12,8 @@ function Agequestion(props){
   );
 }
 
-// Agequestion.propTypes = {
+// AgeQuestion.propTypes = {
 //   onTroubleshootingConfirmation: PropTypes.func
 // };
 
-export default Agequestion;
+export default AgeQuestion;
