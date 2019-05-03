@@ -1,6 +1,6 @@
 # _Drink App_
 
-#### _A drink app built with React _
+#### _A drink app built with React_
 
 #### By _**Leo Mangutov**_
 
