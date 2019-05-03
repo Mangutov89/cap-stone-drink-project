@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+
 
 function Navbar(){
 
@@ -23,11 +23,7 @@ function Navbar(){
   const marginLeft = {
     marginLeft: '25px'
   };
-  const linkStyle = {
-    color: 'white',
-    fontFamily: 'monospace',
-    textDecoration: 'none'
-  };
+
 
   return (
     <div style={ flexNavbar }>
@@ -35,7 +31,6 @@ function Navbar(){
         <h1>PDX Beerly Bar</h1>
       </div>
       <div style = { sideNav }>
-        // <Link to = "/" style = { marginRight, linkStyle }>ABOUT US</Link>
         <h1 style = { marginRight }>RECOMMEND A BEER</h1>
       </div>
     </div>
