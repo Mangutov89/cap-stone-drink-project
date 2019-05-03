@@ -17,6 +17,7 @@ function CreateNewDrinkForm(props){
 
   return (
     <div>
+    <h1>If you cant find you drink, you can make your own recipe here, but you must create and account to do so.</h1>
       <form onSubmit={handleCreateNewDrinkFormSubmission}>
         <input
           type='text'

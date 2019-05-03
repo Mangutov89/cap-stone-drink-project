@@ -24,10 +24,10 @@ function DrinkList(props) {
   );
 }
 
-// DrinkList.propTypes = {
-//   ticketList: PropTypes.object,
-//   currentRouterPath: PropTypes.string,
-//   onDrinkSelection: PropTypes.func
-// };
+DrinkList.propTypes = {
+  ticketList: PropTypes.object,
+  currentRouterPath: PropTypes.string,
+  onDrinkSelection: PropTypes.func
+};
 
 export default DrinkList;
