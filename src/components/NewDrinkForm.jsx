@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Moment from 'moment';
 
 function NewDrinkForm(props){
 
   let _name = null;
   let _ingredients = null;
-  let _issue = null;
+  let _directions = null;
 
   function handleNewDrinkFormSubmission(event) {
     event.preventDefault();
-    props.onNewDrinkCreation({name: _name.value, ingredients: _ingredients.value, issue: _issue.value, timeOpen: new Moment()});
+    props.onNewDrinkCreation({name: _name.value, ingredients: _ingredients.value, directions: _directions.value});
     _name.value = '';
     _ingredients.value = '';
-    _issue.value = '';
+    _directions.value = '';
   }
 
   return (
@@ -30,10 +29,10 @@ function NewDrinkForm(props){
           placeholder='Ingredients'
           ref={(input) => {_ingredients = input;}}/>
         <textarea
-          id='issue'
-          placeholder='Describe your issue.'
-          ref={(textarea) => {_issue = textarea;}}/>
-        <button type='submit'>Help!</button>
+          id='directions'
+          placeholder='Enter step by step directions'
+          ref={(textarea) => {_directions = textarea;}}/>
+        <button type='submit'>Submit</button>
       </form>
     </div>
   );
