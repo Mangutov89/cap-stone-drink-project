@@ -19,14 +19,14 @@ class DrinkSearchPage extends React.Component {
     let json;
     let drinkList = [...this.state.searchDrinkList]
     try {
-      const response = await fetch(`https://api.adzuna.com:443/v1/api/jobs/us/search/1?app_id=${process.env.API_ID}&app_key=${process.env.API_KEY}&what=${searchTerm}`);
+      const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/{process.env.API_KEY}/search.php?s={searchTerm}`);
       json = await response.json();
       console.log(json)
       for (var i = 0; i <= 9; i ++) {
-        const name = json.results[i].company.display_name;
-        const ingredients = json.results[i].title;
+        const name = json.drinks[i].strDrink;
+        const ingredients = json.drinks[i].strIngredient1;
 
-        drinkList.push({company, title})
+        drinkList.push({name, ingredients})
       }
     }
     catch(e) {
