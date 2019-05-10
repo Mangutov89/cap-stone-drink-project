@@ -21,6 +21,20 @@ function DrinkSearch(props){
           ref={(input) => {_search = input;}}/>
         <button type='submit'>Search</button>
       </form>
+      <form onSubmit={e => {
+        e.preventDefault();
+        if (!input.value.trim()) {
+          return;
+        }
+        props.onGetJobsFromAPI(input.value.trim());
+        input.value = '';
+      }}>
+        <input placeholder="job search" ref={node => {
+          input = node;
+        }}></input>
+        <button>Search</button>
+      </form>
+
     </div>
   );
 }
