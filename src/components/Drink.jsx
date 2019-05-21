@@ -4,7 +4,14 @@ import { connect } from 'react-redux';
 import { saveDrink } from './../actions';
 
 function Drink(props){
-  const drinkInformation =
+
+  const drink = {
+    name: props.name,
+    ingredients: props.ingredients,
+    directions: props.directions,
+    id: props.id
+  }
+  return (
     <div>
       <h2>{props.name}</h2>
       <h4>{props.ingredients}</h4>
@@ -13,8 +20,9 @@ function Drink(props){
           e.preventDefault();
           props.dispatch(saveDrink(drink));}
         }>Save this Drink</button>
-      <hr/>
-    </div>;
+        <hr/>
+      </div>;
+  )
 }
 
 Drink.propTypes = {
@@ -29,4 +37,4 @@ Drink.propTypes = {
   // ticketId: PropTypes.string.isRequired
 };
 
-export default Drink;
+export default connect()(Drink);

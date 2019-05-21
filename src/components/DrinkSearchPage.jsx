@@ -1,6 +1,6 @@
 import React from 'react';
 import DrinkSearch from './DrinkSearch';
-import DrinkDisplay from './DrinkDisplay';
+import DrinkList from './DrinkList';
 import v4 from 'uuid/v4';
 
 
@@ -40,7 +40,7 @@ class DrinkSearchPage extends React.Component {
     return(
       <div>
         <DrinkSearch onGetDrinksFromAPI={this.handleGetDrinksFromAPI}/>
-        <DrinkDisplay drinkList= {this.state.searchDrinkList}/>
+        <DrinkList drinkList= {this.state.searchDrinkList}/>
       </div>
 
     );
