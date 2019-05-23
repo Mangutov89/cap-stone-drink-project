@@ -25,6 +25,14 @@ function Drink(props){
   }
   return (
     <div>
+      <style jsx>{`
+          img {
+            float: left;
+            height: 300px;
+            width: 300px;
+            margin-right: 25px;
+          }
+        `}</style>
       <h2>{props.name}</h2>
       <img src={props.image}></img>
       <h4>{props.ingredient1} - {props.measurement1}</h4>

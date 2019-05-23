@@ -17,6 +17,16 @@ function CreateNewDrinkForm(props){
 
   return (
     <div>
+      <style jsx>{`
+          input {
+            height: 100px;
+            width: 400px;
+          }
+          textarea {
+            height: 100px;
+            width: 400px;
+          }
+        `}</style>
       <form onSubmit={handleCreateNewDrinkFormSubmission}>
         <input
           type='text'

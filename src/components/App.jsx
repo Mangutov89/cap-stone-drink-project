@@ -33,11 +33,12 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        
+
         <Navbar/>
         <AlcoholPicture/>
         <DrinkSearchPage/>
         <Switch>
+
           <Route exact path='/about' component= {About} />
           <Route path='/create' component= {CreateNewDrinkForm} />
           <Route path='/saved' component= {SavedDrinksFromAPI} />

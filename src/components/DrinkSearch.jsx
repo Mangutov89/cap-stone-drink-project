@@ -5,6 +5,16 @@ function DrinkSearch(props){
   let input;
   return (
     <div>
+      <style jsx>{`
+          input {
+            width: 60%;
+            height: 45px;
+          }
+          button {
+            height: 45px;
+            width: 90px;
+          }
+        `}</style>
       <form onSubmit={e => {
         e.preventDefault();
         if (!input.value.trim()) {
