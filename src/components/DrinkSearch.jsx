@@ -10,10 +10,10 @@ function DrinkSearch(props){
         if (!input.value.trim()) {
           return;
         }
-        props.onGetJobsFromAPI(input.value.trim());
+        props.onGetDrinksFromAPI(input.value.trim());
         input.value = '';
       }}>
-        <input placeholder="job search" ref={node => {
+        <input placeholder="drink search" ref={node => {
           input = node;
         }}></input>
         <button>Search</button>

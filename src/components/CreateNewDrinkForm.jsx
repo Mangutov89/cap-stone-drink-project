@@ -39,8 +39,8 @@ function CreateNewDrinkForm(props){
   );
 }
 
-// CreateNewDrinkForm.propTypes = {
-//   onCreateNewDrinkCreation: PropTypes.func
-// };
+CreateNewDrinkForm.propTypes = {
+  onCreateNewDrinkCreation: PropTypes.func
+};
 
 export default CreateNewDrinkForm;

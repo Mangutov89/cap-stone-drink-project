@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 function Navbar(){
 
@@ -9,7 +9,7 @@ function Navbar(){
     justifyContent: 'space-between',
     backgroundColor: 'black',
     color: 'white',
-    fontFamily: 'monospace'
+    fontFamily: 'Russo One'
   };
 
   const sideNav = {
@@ -34,8 +34,7 @@ function Navbar(){
         <h1 style = { marginRight }>Log In</h1>
         <h1 style = { marginRight }>About Us</h1>
         <h1 style = { marginRight }>Create a Drink</h1>
-        <h1 style = { marginRight }>Your Favorite Drinks</h1>
-        <h1 style = { marginRight }>Shop</h1>
+        <Link to="/saved" style={marginRight}>Your Saved Drinks</Link>
       </div>
     </div>
   );

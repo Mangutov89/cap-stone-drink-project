@@ -1,4 +1,4 @@
-import * as types from './../constants/ActionsTypes';
+import * as types from './../constants/ActionTypes';
 
 export const saveDrink = (currentDrink) => ({
   type: types.SAVE_DRINK,

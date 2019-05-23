@@ -4,19 +4,16 @@ import PropTypes from 'prop-types';
 import Drink from './Drink';
 
 
-function SavedDrinkFromAPI(props) {
+function SavedDrinksFromAPI(props) {
   const drinkList = props.drinkList;
   console.log(drinkList);
   return(
     <div>
-      <p>saved</p>
+      <h1>Your Saves Drink Recipes</h1>
       {Object.keys(drinkList).map((drink, index) =>
 
-        <Job title={drinkList[drink].title}
-          company={drinkList[drink].company}
-          description={drinkList[drink].description}
-          location={drinkList[drink].location}
-          website={drinkList[drink].website}
+        <Drink name={drinkList[drink].name}
+          ingredients={drinkList[drink].ingredients}
           id={drinkList[drink].id}
           key={index} />
       )}
@@ -24,9 +21,6 @@ function SavedDrinkFromAPI(props) {
   );
 }
 
-SavedJobs.propTypes = {
-  songList: PropTypes.object,
-};
 
 const mapStateToProps = state => {
   return {
@@ -34,4 +28,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(SavedDrinkFromAPI);
+export default connect(mapStateToProps)(SavedDrinksFromAPI);
