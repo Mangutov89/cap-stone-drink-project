@@ -6,6 +6,7 @@ import DrinkSearchPage from './DrinkSearchPage';
 import SavedDrinksFromAPI from './SavedDrinksFromAPI';
 import About from './About';
 import DrinkList from './DrinkList';
+import NewDrinkList from './NewDrinkList';
 import CreateNewDrinkForm from './CreateNewDrinkForm';
 import Error404 from './Error404';
 
@@ -15,7 +16,11 @@ class App extends React.Component {
   constructor(props) {
    super(props);
    this.state = {
-     masterDrinkList: {},
+     masterDrinkList: [
+       {
+         name: 'mart'
+       }
+     ]
    };
    this.handleAddingNewDrinkToList = this.handleAddingNewDrinkToList.bind(this);
   }
@@ -34,14 +39,17 @@ class App extends React.Component {
         <Navbar/>
         <AlcoholPicture/>
         <DrinkSearchPage/>
+        <CreateNewDrinkForm/>
+        <NewDrinkList newMasterDrinkList={this.state.masterDrinkList}/>
 
-
+        {console.log(this.state.masterDrinkList)}
         <Switch>
           <Route exact path='/about' component= {About} />
           <Route path='/create' component= {CreateNewDrinkForm} />
           <Route path='/saved' component= {SavedDrinksFromAPI} />
           <Route path='/drinklist' component= {DrinkList} />
-          <Route path='/newdrink' render={()=><CreateNewDrinkForm onNewDrinkCreation={this.handleAddingNewDrinkToList} />} />
+          <Route path='/newdrinkform' render={()=><CreateNewDrinkForm onNewDrinkCreation={this.handleAddingNewDrinkToList} />} />
+          <Route path= '/newdrink' render={()=><NewDrinkList newMasterDrinkList={this.state.masterDrinkList} />} />
           <Route component={Error404} />
         </Switch>
       </div>

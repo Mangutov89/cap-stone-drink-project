@@ -9,7 +9,7 @@ function CreateNewDrinkForm(props){
 
   function handleCreateNewDrinkFormSubmission(event) {
     event.preventDefault();
-    props.onCreateNewDrinkCreation({name: _name.value, ingredients: _ingredients.value, directions: _directions.value});
+    props.onCreateNewDrinkCreation({newName: _name.value, ingredients: _ingredients.value, directions: _directions.value});
     _name.value = '';
     _ingredients.value = '';
     _directions.value = '';
