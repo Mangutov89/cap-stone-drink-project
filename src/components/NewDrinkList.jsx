@@ -6,8 +6,13 @@ function NewDrinkList(props){
   return (
     <div>
       <hr/>
-      {console.log(props.newMasterDrinkList)}
-      
+      {props.newMasterDrinkList.map((drink, index) =>
+        <NewDrink name={drink.newName}
+          ingredients={drink.ingredients}
+          directions={drink.directions}
+          key={index}/>
+      )}
+      <NewDrinkList/>
     </div>
   )
 }

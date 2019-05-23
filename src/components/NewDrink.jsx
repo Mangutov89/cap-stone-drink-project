@@ -10,7 +10,6 @@ function NewDrink(props){
         <h3>{props.newName}</h3>
         <h3>{props.ingredients}</h3>
         <h3>{props.directions}</h3>
-
       </div>
     </div>
   )

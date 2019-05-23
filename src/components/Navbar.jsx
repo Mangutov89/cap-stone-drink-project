@@ -31,10 +31,10 @@ function Navbar(){
         <h1>Drink App</h1>
       </div>
       <div style = { sideNav }>
-        <h1 style = { marginRight }>Log In</h1>
-        <h1 style = { marginRight }>About Us</h1>
-        <h1 style = { marginRight }>Create a Drink</h1>
-        <Link to="/saved" style={marginRight}>Your Saved Drinks</Link>
+
+        <Link to="/about" style={marginRight}>ABOUT US</Link>
+        <Link to="/create" style={marginRight}>CREATE A DRINK</Link>
+        <Link to="/saved" style={marginRight}>YOUR SAVED DRINKS</Link>
       </div>
     </div>
   );
